@@ -168,7 +168,7 @@ class MainWindow(QMainWindow):
         path, _ = QFileDialog.getOpenFileName(
             self,
             "选择图片",
-            "/Users/manishaqian/Documents/骨科工作/ai 外髁骨折/image/移位",
+            "",
             "Image Files (*.png *.jpg *.jpeg *.bmp *.tif *.tiff)"
         )
         if not path:
@@ -190,7 +190,7 @@ class MainWindow(QMainWindow):
             QMessageBox.warning(self, "提示", "请在图像上点击以选择中心点！")
             return
 
-        json_path, _ = QFileDialog.getSaveFileName(self, "保存 JSON", f"/Users/manishaqian/Documents/labelPZY/d/{self.image_label.image_path.split('/')[-1].replace('.jpg', '').replace('.png', '')}.json", "JSON Files (*.json)")
+        json_path, _ = QFileDialog.getSaveFileName(self, "保存 JSON", f"{self.image_label.image_path.split('/')[-1].replace('.jpg', '').replace('.png', '')}.json", "JSON Files (*.json)")
         if not json_path:
             return
 
